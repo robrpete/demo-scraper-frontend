@@ -23,5 +23,5 @@ Built with:
 
 ## ⚡ Getting Started
 
-- git clone https://github.com/your-username/stock-scraper-frontend.git
-- cd stock-scraper-frontend
+- git clone https://github.com/robrpete/demo-scraper-frontend.git
+- cd demo-scraper-frontend
