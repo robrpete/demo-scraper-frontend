@@ -12,7 +12,7 @@ const data = [
   { name: "GOOGL", value: 19 },
   { name: "NVDA", value: 8 },
   { name: "GTHP", value: 12 },
-  { name: "APPL", value: 18 },
+  { name: "APPL", value: 14 },
   { name: "TSLA", value: 28 },
 ];
 
@@ -26,7 +26,7 @@ export default function StockChart() {
           <XAxis dataKey="name" stroke="#d1d5db" />
           <YAxis stroke="#d1d5db" />
           <Tooltip cursor={{ fill: "transparent" }} />
-          <Bar dataKey="value" fill="#8884d8" />
+          <Bar dataKey="value" fill="#F7941B" />
         </BarChart>
       </ResponsiveContainer>
     </div>
