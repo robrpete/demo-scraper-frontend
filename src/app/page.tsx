@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import StockLi from "~/components/stock-li";
+import StockLi from "~/components/stockBar";
+import StockChart from "~/components/stockChart";
+import NewsArticle from "~/components/newsArticle";
+import StockList from "~/components/stockList";
 
 export default function HomePage() {
   const allNames = ["OPEN", "GOOGL", "NVDA", "GTHP", "APPL"];
@@ -57,27 +59,18 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div>table</div>
+        <div className="h-64 w-2/4">
+          <StockChart />
+        </div>
+        <div className="h-fit w-3/4 bg-black">
+          <StockList />
+        </div>
       </div>
       <div className="flex w-3/4 flex-col gap-2">
         <div className="text-2xl font-bold">STOCK NEWS</div>
         {[1, 2, 3, 4].map((n) => (
           <div key={n} className="rounded-lg border border-zinc-500 p-2">
-            <div className="flex items-start">
-              <div className="h-24 w-24 shrink-0 bg-white">
-                <Image src={"/la71f.png"} alt="la7" height={96} width={96} />
-              </div>
-              <div className="h-full w-4"></div>
-              <div>
-                <h4 className="font-semibold">Article {n}</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Commodi ex quos assumenda veniam repellat ipsum non expedita
-                  autem quas sequi.
-                </p>
-                <p className="text-zinc-500">Sept 7</p>
-              </div>
-            </div>
+            <NewsArticle n={n} />
           </div>
         ))}
       </div>
