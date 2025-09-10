@@ -64,8 +64,8 @@ export default function HomePage() {
             <StockChart />
           </div>
         </div>
-        <div className="h-fit w-3/4 rounded-md border border-zinc-500 bg-[#00000045]">
-          <ul className="grid w-full grid-cols-6 grid-rows-1 border border-zinc-500 pt-2 font-semibold">
+        <div className="h-fit w-3/4 rounded-md border border-zinc-500">
+          <ul className="grid w-full grid-cols-6 grid-rows-1 border border-zinc-500 bg-zinc-600/45 pt-2 font-semibold">
             <li className="pl-2">Name</li>
             <li>Price</li>
             <li>Volume</li>
@@ -76,8 +76,14 @@ export default function HomePage() {
           {[
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
             20, 21, 22, 23, 24, 25,
-          ].map((i) => (
-            <StockRow key={i} name={"OPEN"} price={"12.99"} volume={"1M"} />
+          ].map((_, i) => (
+            <StockRow
+              key={i}
+              name={"OPEN"}
+              price={"12.99"}
+              volume={"1M"}
+              bg={i}
+            />
           ))}
         </div>
       </div>
